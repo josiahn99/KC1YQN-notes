@@ -55,3 +55,60 @@ And the moment you understand that, 50 Ω stops being a magic number and starts 
 (Which is why 50 Ω became standard in RF systems.)
 
 Voltage ground 
+
+
+## Working on Astable Multivibrator 
+Goals: 
+- Understanding why resistors are needed before each component
+- Understanding flow of electricity during each step, solidify knowledge of behavior of transistors, caps, resistors, LEDs
+- Reading resistor color codes
+- Wiring on a breadboard 
+
+### Components
+Resistors used - 
+-2 100k ohms to collectors 
+-2 10k ohms to base / capacitors 
+
+- 2 100 microfarad caps
+- 2 LEDs
+- 2 2n2222 NPN transistors
+
+Vcc = 5V
+
+
+### Why ~0.6V Matters
+
+Silicon BJT base-emitter junction behaves like a diode.
+Needs ~0.6–0.7V to conduct.
+That threshold determines switching timing.
+If you ever see ~0.6V and wonder why — it’s physics, not magic.
+
+### Base Resistors (e.g., 10kΩ)
+
+Limit base current.
+Set charge rate of capacitor.
+Help determine oscillation period.
+LED Resistors (e.g., 470Ω)
+Limit LED current.
+Protect LED and transistor.
+Set brightness.
+
+## Timing formula
+For symmetric design:
+
+T≈1.4×R×C
+T≈1.4×R×C
+
+Where:
+
+R = base resistor
+
+C = capacitor
+
+It took me a little while to figure out how to wire correctly, basically treating the entire top of the circuit board as a + and the entire bottom as the negative with a cord linked. 
+
+The other item was understanding why the current would go through the open transistor instead of through the LED, it's becaues of less resistance. Was able to walk through the circuit and understand each step and what ishappening. 
+
+Think this through - why does when side have 100 micro farads and the other 10, the 100 microfarad connected to the base of the transistor, the led connected to the 10 mf blinks and the other does nothing 
+
+It's staying closed so long that the smaller cap has a long time to charge, so even when teh other light goes off, it wont' go on because it had so much time to charge. 
