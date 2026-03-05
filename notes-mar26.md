@@ -1,6 +1,6 @@
 # march notes
 
-
+	
 ## understanding ground and voltage
 
 Trying to understand what
@@ -112,3 +112,5 @@ The other item was understanding why the current would go through the open trans
 Think this through - why does when side have 100 micro farads and the other 10, the 100 microfarad connected to the base of the transistor, the led connected to the 10 mf blinks and the other does nothing 
 
 It's staying closed so long that the smaller cap has a long time to charge, so even when teh other light goes off, it wont' go on because it had so much time to charge. 
+
+question: why can't a transistor amplify a light plugged into the wall? 
